@@ -7,9 +7,32 @@
          version="3.1"
          metadata-complete="true">
 
+  <!-- 配置当前Web应用的初始化参数 -->
+
+  <!-- 配置和映射servlet  start -->
   <servlet>
     <servlet-name>lifeCycleServlet</servlet-name>
     <servlet-class>com.zxj.helloworld.LifeCycleServlet</servlet-class>
+
+    <!-- 配置 ServletConfig 初始化参数 (这个节点必须在load-on-startup的前面) start -->
+    <init-param>
+      <param-name>aaa</param-name>
+      <param-value>abc</param-value>
+    </init-param>
+    <init-param>
+      <param-name>user</param-name>
+      <param-value>zhaoxiujie</param-value>
+    </init-param>
+    <init-param>
+      <param-name>pwd</param-name>
+      <param-value>zxjpassword</param-value>
+    </init-param>
+    <init-param>
+      <param-name>zoo</param-name>
+      <param-value>animal zoo</param-value>
+    </init-param>
+    <!-- ServletConfig 初始化参数  end -->
+
     <load-on-startup>-1</load-on-startup> <!-- 值大于等于0时，服务器一启动就调该Servlet的构造器和init。 -->
   </servlet>
 
@@ -17,5 +40,6 @@
     <servlet-name>lifeCycleServlet</servlet-name>
     <url-pattern>/lifecycle</url-pattern>
   </servlet-mapping>
+  <!-- 配置和映射servlet  end -->
 
 </web-app>

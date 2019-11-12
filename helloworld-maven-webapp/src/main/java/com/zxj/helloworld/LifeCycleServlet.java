@@ -27,18 +27,26 @@ public class LifeCycleServlet implements Servlet {
         String userConfigValue=servletConfig.getInitParameter("user");
         System.out.println("user:"+userConfigValue);
 
-        Enumeration<String> parameterNames = servletConfig.getInitParameterNames();
-        while (parameterNames.hasMoreElements()){
-            String parameterName=parameterNames.nextElement();
-            String parameterValue=servletConfig.getInitParameter(parameterName);
-            System.out.println("config name:"+parameterName+";config value:"+parameterValue);
+        Enumeration<String> servletParamNames = servletConfig.getInitParameterNames();
+        while (servletParamNames.hasMoreElements()){
+            String servletParamName=servletParamNames.nextElement();
+            String servletParamValue=servletConfig.getInitParameter(servletParamName);
+            System.out.println(servletParamName+"--->"+servletParamValue);
         }
         //endregion
 
 
-        //region ServletContext 对象
+        //region ServletContext 对象:web.xml中配置的 context-params节点
         ServletContext servletContext=servletConfig.getServletContext();
+        String driver=servletContext.getInitParameter("driver");
+        System.out.println("driver:"+driver);
 
+        Enumeration<String> contextParamNames=servletContext.getInitParameterNames();
+        while (contextParamNames.hasMoreElements()){
+            String contextParamName=contextParamNames.nextElement();
+            String contextParamValue=servletContext.getInitParameter(contextParamName);
+            System.out.println(contextParamName+"--->"+contextParamValue);
+        }
 
         //endregion
     }

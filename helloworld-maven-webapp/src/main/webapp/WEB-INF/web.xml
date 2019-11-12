@@ -8,6 +8,14 @@
          metadata-complete="true">
 
   <!-- 配置当前Web应用的初始化参数 -->
+  <context-param>
+    <param-name>driver</param-name>
+    <param-value>com.mysql.jdbc.Driver</param-value>
+  </context-param>
+  <context-param>
+    <param-name>jdbcUrl</param-name>
+    <param-value>jdbc:mysql://192.168.155.106:3306/addressinfo?useUnicode=true&amp;characterEncoding=UTF-8</param-value>
+  </context-param>
 
   <!-- 配置和映射servlet  start -->
   <servlet>
@@ -39,6 +47,24 @@
   <servlet-mapping>
     <servlet-name>lifeCycleServlet</servlet-name>
     <url-pattern>/lifecycle</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>loginServlet</servlet-name>
+    <servlet-class>com.zxj.helloworld.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loginServlet</servlet-name>
+    <url-pattern>/loginServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>loginHttpServlet</servlet-name>
+    <servlet-class>com.zxj.helloworld.LoginHttpServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loginHttpServlet</servlet-name>
+    <url-pattern>/loginHttpServlet</url-pattern>
   </servlet-mapping>
   <!-- 配置和映射servlet  end -->
 

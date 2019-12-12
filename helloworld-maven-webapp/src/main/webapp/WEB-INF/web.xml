@@ -9,6 +9,11 @@
 
   <!-- 配置当前Web应用的初始化参数 -->
   <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:spring-config.xml</param-value>
+  </context-param>
+
+  <context-param>
     <param-name>driver</param-name>
     <param-value>com.mysql.jdbc.Driver</param-value>
   </context-param>

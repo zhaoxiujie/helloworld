@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <RollingFile name="InfoFile" fileName="/Users/zhaoxiujie/Documents/Other Files/Logs/helloword/info.log" filePattern="/Users/zhaoxiujie/Documents/Other Files/Logs/helloword/info-%i.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss:SSS} %p %m%n"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+                <TimeBasedTriggeringPolicy modulate="true" interval="1" />
+            </Policies>
+            <DefaultRolloverStrategy max="3"/>
+        </RollingFile>
+        <RollingFile name="ErrorFile" fileName="/Users/zhaoxiujie/Documents/Other Files/Logs/helloword/error.log" filePattern="/Users/zhaoxiujie/Documents/Other Files/Logs/helloword/error-%i.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss:SSS} %p %m%n"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+                <TimeBasedTriggeringPolicy modulate="true" interval="1" />
+            </Policies>
+            <DefaultRolloverStrategy max="3"/>
+        </RollingFile>
+        <RollingFile name="RpcInfoFile" fileName="/Users/zhaoxiujie/Documents/Other Files/Logs/helloword/rpc-info.log" filePattern="/Users/zhaoxiujie/Documents/Other Files/Logs/helloword/rpc-info-%i.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss:SSS} %p %m%n"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+                <TimeBasedTriggeringPolicy modulate="true" interval="1" />
+            </Policies>
+            <DefaultRolloverStrategy max="3"/>
+        </RollingFile>
+        <RollingFile name="RpcErrorFile" fileName="/Users/zhaoxiujie/Documents/Other Files/Logs/helloword/rpc-error.log" filePattern="/Users/zhaoxiujie/Documents/Other Files/Logs/helloword/rpc-error-%i.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss:SSS} %p %m%n"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+                <TimeBasedTriggeringPolicy modulate="true" interval="1" />
+            </Policies>
+            <DefaultRolloverStrategy max="3"/>
+        </RollingFile>
+        <RollingFile name="OtherFile" fileName="/Users/zhaoxiujie/Documents/Other Files/Logs/helloword/other.log" filePattern="/Users/zhaoxiujie/Documents/Other Files/Logs/helloword/other-%i.log">
+            <TradeLogFilter/>
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss:SSS} %p %m%n"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+                <TimeBasedTriggeringPolicy modulate="true" interval="1" />
+            </Policies>
+            <DefaultRolloverStrategy max="3"/>
+        </RollingFile>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss:SSS} %p %m%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="InfoLogger" level="info" additivity="false">
+            <AppenderRef ref="InfoFile"/>
+        </Logger>
+        <Logger name="ErrorLogger" level="error" additivity="false">
+            <AppenderRef ref="ErrorFile"/>
+        </Logger>
+        <Logger name="RpcInfoLogger" level="info" additivity="false">
+            <AppenderRef ref="RpcInfoFile"/>
+        </Logger>
+        <Logger name="RpcErrorLogger" level="error" additivity="false">
+            <AppenderRef ref="RpcErrorFile"/>
+        </Logger>
+        <Root level="Error" additivity="false">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>

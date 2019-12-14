@@ -1,0 +1,39 @@
+#containerInfo .pipeline .normal {
+    margin: 2px 4px;
+    color: #f9f9f9;
+    background-color: #00A65A;
+}
+#containerInfo .pipeline .critical {
+    margin: 2px 4px;
+    cursor:pointer;
+    color: #f9f9f9;
+    background-color: #FF0000;
+}
+#containerInfo .pipeline .warn {
+    margin: 2px 4px;
+    cursor:pointer;
+    background-color: #FFFF00;
+}
+#containerInfo .pipeline .unknown {
+    margin: 2px 4px;
+}
+.strikethrough {
+    text-decoration:line-through;
+}
+.seriesToggleBtn{
+    margin-left:2px;
+    margin-right:10px;
+}
+
+.dongdong {
+    background: url(images/dongdong.png) no-repeat center;
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+    display: inline-block;
+    margin-bottom: -3px;
+}
+textarea {
+    max-width: 100%;
+    min-width: 100%;
+}

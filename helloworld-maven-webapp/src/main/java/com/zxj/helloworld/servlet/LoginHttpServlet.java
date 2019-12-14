@@ -1,4 +1,4 @@
-package com.zxj.helloworld;
+package com.zxj.helloworld.servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

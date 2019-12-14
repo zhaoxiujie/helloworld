@@ -1,4 +1,4 @@
-package com.zxj.helloworld;
+package com.zxj.helloworld.servlet;
 
 
 import javax.servlet.*;
@@ -23,7 +23,7 @@ public class LifeCycleServlet implements Servlet {
         //endregion
 
 
-        //region web.xml中配置的 init-params节点
+        //region servletConfig对象 web.xml中配置的 init-params节点
         String userConfigValue=servletConfig.getInitParameter("user");
         System.out.println("user:"+userConfigValue);
 

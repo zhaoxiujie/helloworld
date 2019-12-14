@@ -1,4 +1,4 @@
-package com.zxj.helloworld;
+package com.zxj.helloworld.servlet;
 
 import javax.servlet.*;
 import java.io.IOException;
@@ -16,7 +16,9 @@ public abstract class MyGenericServlet implements Servlet,ServletConfig {
         this.init();
     }
 
-    public void init() throws ServletException { }
+    public void init() throws ServletException {
+        System.out.println("init...");
+    }
 
     @Override
     public ServletConfig getServletConfig() {
@@ -33,7 +35,7 @@ public abstract class MyGenericServlet implements Servlet,ServletConfig {
 
     @Override
     public void destroy() {
-
+        System.out.println("destroy...");
     }
 
     //region  ServletConfig接口的方法

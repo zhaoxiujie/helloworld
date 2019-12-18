@@ -34,7 +34,7 @@
   <!-- 配置和映射servlet  start -->
   <servlet>
     <servlet-name>lifeCycleServlet</servlet-name>
-    <servlet-class>com.zxj.helloworld.servlet.LifeCycleServlet</servlet-class>
+    <servlet-class>com.zxj.helloworld.protoservlet.LifeCycleServlet</servlet-class>
 
     <!-- 配置 ServletConfig 初始化参数 (这个节点必须在load-on-startup的前面) start -->
     <init-param>
@@ -65,7 +65,7 @@
   
   <servlet>
     <servlet-name>loginServlet</servlet-name>
-    <servlet-class>com.zxj.helloworld.servlet.LoginServlet</servlet-class>
+    <servlet-class>com.zxj.helloworld.protoservlet.LoginServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>loginServlet</servlet-name>
@@ -74,7 +74,7 @@
 
   <servlet>
     <servlet-name>loginHttpServlet</servlet-name>
-    <servlet-class>com.zxj.helloworld.servlet.LoginHttpServlet</servlet-class>
+    <servlet-class>com.zxj.helloworld.protoservlet.LoginHttpServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>loginHttpServlet</servlet-name>
@@ -83,11 +83,20 @@
 
   <servlet>
     <servlet-name>loginMyGenericServlet</servlet-name>
-    <servlet-class>com.zxj.helloworld.servlet.LoginMyGenericServlet</servlet-class>
+    <servlet-class>com.zxj.helloworld.protoservlet.LoginMyGenericServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>loginMyGenericServlet</servlet-name>
     <url-pattern>/loginMyGenericServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>loginMyHttpServlet</servlet-name>
+    <servlet-class>com.zxj.helloworld.protoservlet.LoginMyHttpServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loginMyHttpServlet</servlet-name>
+    <url-pattern>/loginMyHttpServlet</url-pattern>
   </servlet-mapping>
   <!-- 配置和映射servlet  end -->
 

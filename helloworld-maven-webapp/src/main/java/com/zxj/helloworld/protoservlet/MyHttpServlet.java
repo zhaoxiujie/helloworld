@@ -1,4 +1,4 @@
-package com.zxj.helloworld.servlet;
+package com.zxj.helloworld.protoservlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
@@ -31,12 +31,12 @@ public class MyHttpServlet extends MyGenericServlet {
         }
     }
 
-    private void doOthers(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doOthers(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     }
 
-    private void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     }
 
-    private void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     }
 }

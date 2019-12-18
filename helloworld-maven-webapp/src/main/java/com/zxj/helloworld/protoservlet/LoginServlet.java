@@ -1,4 +1,4 @@
-package com.zxj.helloworld.servlet;
+package com.zxj.helloworld.protoservlet;
 
 
 import javax.servlet.*;

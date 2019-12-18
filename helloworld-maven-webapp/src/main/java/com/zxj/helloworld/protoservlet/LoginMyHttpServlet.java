@@ -1,19 +1,24 @@
-package com.zxj.helloworld.servlet;
+package com.zxj.helloworld.protoservlet;
 
 import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class LoginMyGenericServlet extends MyGenericServlet {
+public class LoginMyHttpServlet extends MyHttpServlet {
+
     @Override
-    public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
-        System.out.println("This is service method in LoginMyGenericServlet.");
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        doPost(request,response);
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        System.out.println("This is service method in LoginMyHttpServlet.");
 
         //region 获取前端页面请求过来的参数 servletRequest.getParameter(String paramName);
-        String userName = servletRequest.getParameter("userName");
-        String password = servletRequest.getParameter("password");
+        String userName = request.getParameter("userName");
+        String password = request.getParameter("password");
         System.out.println("servletRequest.getParameter()-->" + userName + ":" + password);
         //endregion
 
@@ -23,7 +28,7 @@ public class LoginMyGenericServlet extends MyGenericServlet {
         System.out.println("context-param-->" + initUserName + ":" + initPassword);
         //endregion
 
-        PrintWriter writer=servletResponse.getWriter();
+        PrintWriter writer=response.getWriter();
 
         if (userName.equals(initUserName) && password.equals(initPassword)) {
             writer.println("Hello,"+userName+"!");

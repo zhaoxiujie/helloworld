@@ -12,6 +12,8 @@ public class DeleteStudentServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        String studentId=request.getParameter("id");
+        System.out.println("studentId:"+Integer.parseInt(studentId));
+        request.getRequestDispatcher("/success.jsp").forward(request,response);
     }
 }

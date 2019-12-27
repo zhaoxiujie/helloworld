@@ -8,9 +8,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>$Title$</title>
+    <title>success</title>
 </head>
 <body>
-$END$
+操作成功
+<a href="studentListServlet">studentList</a>
 </body>
 </html>

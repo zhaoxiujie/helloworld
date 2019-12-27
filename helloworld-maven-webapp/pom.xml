@@ -37,6 +37,12 @@
       <artifactId>jsp-api</artifactId>
       <version>${jsp.version}</version>
     </dependency>
+    <!-- alibaba的druid数据库连接池 -->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid-spring-boot-starter</artifactId>
+      <version>1.1.9</version>
+    </dependency>
 
     <dependency>
       <groupId>junit</groupId>
@@ -48,6 +54,12 @@
       <groupId>org.springframework</groupId>
       <artifactId>spring-beans</artifactId>
       <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.10</version>
+      <scope>compile</scope>
     </dependency>
   </dependencies>
 

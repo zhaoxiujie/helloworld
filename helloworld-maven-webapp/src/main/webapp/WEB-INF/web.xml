@@ -100,4 +100,22 @@
   </servlet-mapping>
   <!-- 配置和映射servlet  end -->
 
+  <servlet>
+    <servlet-name>studentListServlet</servlet-name>
+    <servlet-class>com.zxj.helloworld.crudservlet.controller.StudentControllerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>studentListServlet</servlet-name>
+    <url-pattern>/studentListServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>deleteStudentServlet</servlet-name>
+    <servlet-class>com.zxj.helloworld.crudservlet.controller.DeleteStudentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deleteStudentServlet</servlet-name>
+    <url-pattern>/deleteStudentServlet</url-pattern>
+  </servlet-mapping>
+
 </web-app>

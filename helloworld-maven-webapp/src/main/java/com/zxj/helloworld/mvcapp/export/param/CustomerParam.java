@@ -6,7 +6,7 @@ import lombok.Data;
  * 查询customer信息入参
  */
 @Data
-public class GetCustomerParam {
+public class CustomerParam {
     /**
      * customerId
      */

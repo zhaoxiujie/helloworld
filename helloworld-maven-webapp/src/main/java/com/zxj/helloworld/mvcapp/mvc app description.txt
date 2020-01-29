@@ -1,0 +1,20 @@
+1、使用到的技术
+    - mvc设计模式：JSP、Servlet
+    - 数据库：mysql
+    - 连接数据库：C3P0数据库连接池
+    - JDBC工具使用DBUtils类、JDBCUtils工具类、DAO基类
+    - 页面提示使用jQuery
+
+
+2、难点
+    - 多个请求使用一个Servlet
+    - 模糊查询
+    - 验证用户名是否已经存在，并给出提示
+
+
+3、编写代码步骤
+    - 加入C3P0数据源
+    - 编写DAO、JDBCUtils工具类和CustomerDAO接口
+    - 提供CustomerDAO接口的实现类:CustomerDAOJDBCImpl、CustomerDAOXMLImpl
+
+4、

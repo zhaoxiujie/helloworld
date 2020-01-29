@@ -1,4 +1,4 @@
-package com.zxj.helloworld.mvcapp.export;
+package com.zxj.helloworld.mvcapp.export.vo;
 
 import lombok.Data;
 

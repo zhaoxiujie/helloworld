@@ -1,4 +1,9 @@
 package com.zxj.helloworld.mvcapp.base.exception;
 
-public class EngineRuntimeException {
+import lombok.Data;
+
+@Data
+public class EngineRuntimeException extends RuntimeException {
+    private String message;
+    private String code;
 }
